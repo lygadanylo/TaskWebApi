@@ -1,0 +1,20 @@
+﻿#body{
+
+}
+
+#tableBlock {
+    float: left;
+    width: 900px;
+    
+}
+
+#editBlock {
+    display: block;
+    float: right;
+}
+
+#createBlock {
+    display: block;
+    float: right;
+    width: 300px;
+}
