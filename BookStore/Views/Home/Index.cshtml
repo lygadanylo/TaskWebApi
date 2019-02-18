@@ -37,7 +37,6 @@
             });
 
         });
-        // Получение всех книг по ajax-запросу
         function GetAllBooks() {
 
             $("#createBlock").css('display', 'block');
@@ -54,9 +53,9 @@
                 }
             });
         }
-        // Добавление новой книги
+
         function AddBook() {
-            // получаем значения для добавляемой книги
+
             var book = {
                 Name: $('#addName').val(),
                 Author: $('#addAuthor').val(),
@@ -76,7 +75,7 @@
                 }
             });
         }
-        // Удаление книги
+
         function DeleteBook(id) {
 
             $.ajax({
@@ -91,10 +90,10 @@
                 }
             });
         }
-        // редактирование книги
+
         function EditBook() {
             var id = $('#editId').val()
-            // получаем новые значения для редактируемой книги
+
             var book = {
                 Id: $('#editId').val(),
                 Name: $('#editName').val(),
@@ -115,7 +114,7 @@
                 }
             });
         }
-        // вывод полученных данных на экран
+
         function WriteResponse(books) {
             var strResult = "<table><th>Назва</th><th>Автор</th><th>Кількість сторінок</th><th>В користувача</th>";
             $.each(books, function (index, book) {
@@ -127,19 +126,19 @@
             $("#tableBlock").html(strResult);
 
         }
-        // обработчик удаления
+
         function DeleteItem(el) {
-            // получаем id удаляемого объекта
+
             var id = $(el).attr('data-item');
             DeleteBook(id);
         }
-        // обработчик редактирования
+
         function EditItem(el) {
-            // получаем id редактируемого объекта
+
             var id = $(el).attr('data-item');
             GetBook(id);
         }
-        // вывод данных редактируемой книги в поля для редактирования
+
         function ShowBook(book) {
             if (book != null) {
                 $("#createBlock").css('display', 'none');
@@ -154,7 +153,7 @@
                 alert("Така книга не існує");
             }
         }
-        // запрос книги на редактирование
+
         function GetBook(id) {
             $.ajax({
                 url: '/api/Books/' + id,
