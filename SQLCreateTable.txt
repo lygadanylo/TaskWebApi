@@ -1,0 +1,8 @@
+CREATE TABLE [dbo].[Books] (
+    [Id]        INT          IDENTITY (1, 1) NOT NULL,
+    [Name]      VARCHAR (50) NULL,
+    [Author]    VARCHAR (50) NULL,
+    [PageCount] INT          NULL,
+    [Email]     VARCHAR (50) NULL,
+    CONSTRAINT [PK_Books] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
